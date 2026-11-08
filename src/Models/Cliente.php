@@ -9,7 +9,7 @@ class Cliente
     ) {
     } 
 
-    public function crear(PDO $db): void /
+    public function crear(PDO $db): void
     {
         $consulta = $db->prepare('INSERT INTO clientes (nombre, correo) VALUES (?, ?)'); 
         $consulta->execute([$this->nombre, $this->correo]); 
