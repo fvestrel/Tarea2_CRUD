@@ -6,3 +6,4 @@
 /logs/
 *.log
 /clientes.sqlite*
+/README.md
