@@ -1,0 +1,15 @@
+# Permite abrir la aplicación desde /crud-clientes/ y limita los archivos accesibles.
+Require all granted
+Options -Indexes
+RewriteEngine On
+
+# Conserva el acceso a la carpeta pública.
+RewriteRule ^public(?:/|$) - [L]
+
+# Sirve el punto de entrada y los estilos desde la dirección corta.
+RewriteRule ^$ public/index.php [L]
+RewriteRule ^index\.php$ public/index.php [L]
+RewriteRule ^css/(.*)$ public/css/$1 [L]
+
+# Bloquea cualquier otro archivo o carpeta del proyecto.
+RewriteRule ^ - [F]

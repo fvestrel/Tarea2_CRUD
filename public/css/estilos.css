@@ -1,0 +1,286 @@
+/* Incluye el borde y el relleno dentro del ancho de los elementos. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f2f4f7;
+    color: #263445;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+/* Centra el contenido y evita que ocupe todo el ancho de una pantalla grande. */
+.contenedor {
+    width: 92%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.barra {
+    padding: 25px 0;
+    background: #243c59;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 27px;
+}
+
+.encabezado p {
+    margin: 5px 0 0;
+    color: #dce5ef;
+    font-size: 14px;
+}
+
+.distribucion {
+    display: grid;
+    gap: 24px;
+    margin-top: 28px;
+}
+
+.panel {
+    padding: 24px;
+    border: 1px solid #d5dce4;
+    border-radius: 5px;
+    background: white;
+}
+
+h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.ayuda, .vacio p {
+    color: #596777;
+    font-size: 14px;
+}
+
+.ayuda {
+    margin: 8px 0 20px;
+}
+
+/* Las etiquetas y campos se colocan uno debajo de otro. */
+.formulario {
+    max-width: 540px;
+}
+
+label {
+    display: block;
+    margin: 14px 0 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input:not([type="hidden"]) {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #aab6c4;
+    border-radius: 4px;
+    color: #263445;
+    font: inherit;
+}
+
+.boton {
+    display: inline-block;
+    min-height: 40px;
+    padding: 9px 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font: inherit;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.principal {
+    margin-top: 20px;
+    background: #285b91;
+    color: white;
+}
+
+.principal:hover {
+    background: #1d466f;
+}
+
+.secundario {
+    border-color: #aab6c4;
+    background: #f4f6f8;
+    color: #263445;
+}
+
+.secundario:hover {
+    background: #e4e9ef;
+}
+
+.eliminar {
+    background: #a63636;
+    color: white;
+}
+
+.eliminar:hover {
+    background: #842929;
+}
+
+.cancelar {
+    display: inline-block;
+    margin-left: 14px;
+    color: #285b91;
+    font-size: 14px;
+}
+
+/* Hace visible la selección al navegar usando la tecla Tab. */
+:focus-visible {
+    outline: 3px solid #285b91;
+    outline-offset: 3px;
+}
+
+.aviso {
+    padding: 12px;
+    border: 1px solid #d9aaaa;
+    border-radius: 4px;
+    background: #fff1f1;
+    color: #852828;
+}
+
+.encabezado-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.contador {
+    padding: 6px 12px;
+    border: 1px solid #c9d9eb;
+    border-radius: 16px;
+    background: #edf4fc;
+    color: #234f7d;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Detalles sencillos para distinguir la sección de consulta. */
+.directorio {
+    border-top: 4px solid #345d87;
+}
+
+.descripcion-lista {
+    margin: 5px 0 0;
+    color: #596777;
+    font-size: 14px;
+}
+
+.nombre-cliente {
+    font-weight: bold;
+}
+
+.icono-cliente {
+    display: inline-block;
+    margin-right: 8px;
+    color: #345d87;
+    font-size: 12px;
+}
+
+/* Resalta la fila sobre la que se está trabajando con ratón o teclado. */
+tbody tr:hover, tbody tr:focus-within {
+    background: #e2edf9;
+}
+
+.directorio .secundario {
+    background: #e9f1fb;
+    border-color: #a6bfda;
+    color: #234f7d;
+}
+
+.directorio .secundario:hover {
+    background: #d5e5f7;
+}
+
+/* Si la tabla es más ancha que el dispositivo, permite deslizarla horizontalmente. */
+.tabla-contenedor {
+    border-radius: 5px;
+    border: 1px solid #d5dce4;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 13px 14px;
+    border: 1px solid #d5dce4;
+    text-align: left;
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+}
+
+th {
+    background: #345d87;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background: #f0f5fa;
+}
+
+.acciones {
+    display: flex;
+    gap: 8px;
+}
+
+.acciones form {
+    margin: 0;
+}
+
+.vacio {
+    padding: 20px;
+    border: 1px dashed #b9c4d0;
+    text-align: center;
+}
+
+.vacio h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+footer {
+    padding: 24px 0;
+    color: #596777;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Oculta el texto visualmente y conserva su lectura con tecnologías de asistencia. */
+.solo-lectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+/* Reduce el espacio ocupado en teléfonos. */
+@media (max-width: 600px) {
+    .panel {
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .acciones {
+        flex-direction: column;
+    }
+}

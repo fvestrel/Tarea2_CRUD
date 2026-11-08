@@ -1,0 +1,8 @@
+/config/database.local.php
+/.env
+/.env.*
+!/.env.example
+.DS_Store
+/logs/
+*.log
+/clientes.sqlite*
