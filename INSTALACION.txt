@@ -1,51 +1,51 @@
 INSTALACIÓN DEL CRUD DE CLIENTES EN XAMPP
 
-1. Descarga el ZIP de la rama crud-clientes-mvc y descomprímelo.
-   Renombra la carpeta que contiene public, config, database y src como
+1. Descargar el ZIP de la rama crud-clientes-mvc y descomprímirlo.
+   Renombrar la carpeta que contiene public, config, database y src como
    crud-clientes. Colócala dentro de htdocs de XAMPP.
 
    macOS: /Applications/XAMPP/htdocs/crud-clientes/
    Windows: C:\xampp\htdocs\crud-clientes\
 
-2. Inicia Apache y MySQL desde XAMPP. Usa PHP 8 o superior con pdo_mysql.
+2. Iniciar Apache y MySQL desde XAMPP. Usa PHP 8 o superior con pdo_mysql.
 
-3. Abre http://localhost/phpmyadmin/ y, en Importar, selecciona
+3. Abre http://localhost/phpmyadmin/ y en Importar seleccionar
    database/base_de_datos.sql. El archivo crea la base crud_clientes
    y la tabla clientes.
 
-4. En Visual Studio Code, copia config/database.example.php con el
-   nombre config/database.local.php. Escribe el usuario y la contraseña
+4. En Visual Studio Code, copiar config/database.example.php con el
+   nombre config/database.local.php. Escribir el usuario y la contraseña
    de MariaDB de tu equipo. Si tu instalación usa root sin contraseña,
-   escribe 'root' como username y '' como password. La conexión usa
+   escribir 'root' como username y '' como password. La conexión usa
    127.0.0.1 y el puerto 3306 por defecto. Si el puerto es distinto,
-   agrega la clave 'port' al arreglo de configuración local.
-   Mantén database.local.php fuera de GitHub.
+   agregar la clave 'port' al arreglo de configuración local.
+   Manténer database.local.php fuera de GitHub por seguridad.
 
 5. Abre http://localhost/crud-clientes/.
    También puedes probar http://localhost/crud-clientes/public/index.php.
-   Si conservaste el nombre original del ZIP, usa ese nombre en la URL.
+   Si conservaste el nombre original del ZIP, usar ese nombre en la URL.
 
 SI APARECE UN ERROR
 
 404: revisa que el nombre de la carpeta coincida con la URL y que exista
 htdocs/crud-clientes/public/index.php. La extensión es .php.
 
-403 en public/index.php: en macOS, verifica que Apache pueda recorrer
-las carpetas y leer los archivos. Desde la terminal de VS Code, confirma
-con pwd que estás en la carpeta recién descomprimida del proyecto.
+403 en public/index.php: verificar que Apache pueda recorrer
+las carpetas y leer los archivos. Desde la terminal de VS Code, confirmar
+con pwd que se estás en la carpeta recién descomprimida del proyecto.
 Si los permisos de la extracción bloquean Apache, ejecuta:
     find . -type d -exec chmod 755 {} +
     find . -type f ! -name database.local.php -exec chmod 644 {} +
 El acceso directo por navegador a config debe seguir bloqueado.
 
-500: comprueba que exista config/database.local.php, que las credenciales
+500: comprobar que exista config/database.local.php, que las credenciales
 sean correctas, que MySQL esté iniciado y que hayas importado el SQL.
 
-Si public/index.php abre y la dirección corta falla, comprueba que el
+Si public/index.php abre y la dirección corta falla, comprobar que el
 archivo oculto .htaccess esté en la raíz y que Apache tenga mod_rewrite
 activo y permita las reglas de ese archivo.
 
 PRUEBA RÁPIDA
 
-Registra un cliente de prueba, comprueba que aparece en la tabla, edita
+Registrar un cliente de prueba, comprueba que aparece en la tabla, edita
 su correo y elimínalo para comprobar las cuatro operaciones del CRUD.
